@@ -1,6 +1,6 @@
 package ru.kurkin.model;
 
-public class City{
+public class City {
     private int id;
     private String name;
     private String region;
@@ -18,10 +18,10 @@ public class City{
     }
 
 
-
     public int getId() {
         return id;
     }
+
     public String getName() {
         return name;
     }
@@ -44,6 +44,6 @@ public class City{
 
     @Override
     public String toString() {
-        return "Город{name='"+name+"', регион='"+region+"', район='"+district+"', население="+population+", фонд='"+foundation+"'}";
+        return "City{name='" + name + "', region='" + region + "', district='" + district + "', population=" + population + ", foundation='" + foundation + "'}";
     }
 }
