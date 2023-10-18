@@ -1,6 +1,6 @@
 package ru.kurkin.model;
 
-public class City{
+public class City implements Comparable<City>{
     private int id;
     private String name;
     private String region;
@@ -26,4 +26,8 @@ public class City{
         return "Город{name='"+name+"', регион='"+region+"', район='"+district+"', население="+population+", фонд='"+foundation+"'}";
     }
 
+    @Override
+    public int compareTo(City o) {
+        return this.name.compareToIgnoreCase(o.getName());//без учета регистра
+    }
 }
