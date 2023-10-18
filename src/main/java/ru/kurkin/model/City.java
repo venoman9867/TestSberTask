@@ -23,7 +23,7 @@ public class City{
 
     @Override
     public String toString() {
-        return "Город{name='"+name+"', регион='"+region+"', район='"+district+"', население="+population+", фонд='"+foundation+"'}";
+        return "City{name='"+name+"', region='"+region+"', district='"+district+"', population="+population+", foundation='"+foundation+"'}";
     }
 
 }
