@@ -17,8 +17,12 @@ public class City{
         this.foundation = foundation;
     }
 
-    public String getName() {
-        return name;
+    public int getId() {
+        return id;
+    }
+
+    public int getPopulation() {
+        return population;
     }
 
     @Override

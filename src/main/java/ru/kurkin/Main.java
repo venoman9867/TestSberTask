@@ -4,10 +4,7 @@ import ru.kurkin.model.City;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
@@ -28,6 +25,15 @@ public class Main {
                     strings[5]);
             cityList.add(city);
         }
-        cityList.forEach(System.out::println);
+        City[] cities = cityList.toArray(City[]::new);
+        int max = Integer.MIN_VALUE;
+        int id = 0;
+        for (int i = 0; i < cities.length; i++) {
+            if (max < cities[i].getPopulation()) {
+                max = cities[i].getPopulation();
+                id = cities[i].getId();
+            }
+        }
+        System.out.println("[" + id + "]" + " = " + max);
     }
 }
